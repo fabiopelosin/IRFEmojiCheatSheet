@@ -1,7 +1,7 @@
 # IRFEmojiCheatSheet
 
-[![Version](http://cocoapod-badges.herokuapp.com/v/IRFEmojiCheatSheet/badge.png)](http://cocoadocs.org/docsets/IRFEmojiCheatSheet)
-[![Platform](http://cocoapod-badges.herokuapp.com/p/IRFEmojiCheatSheet/badge.png)](http://cocoadocs.org/docsets/IRFEmojiCheatSheet)
+[![Version](https://cocoapod-badges.herokuapp.com/v/IRFEmojiCheatSheet/badge.png)](http://cocoadocs.org/docsets/IRFEmojiCheatSheet)
+[![Platform](https://cocoapod-badges.herokuapp.com/p/IRFEmojiCheatSheet/badge.png)](http://cocoadocs.org/docsets/IRFEmojiCheatSheet)
 
 Tiny library which offers programmatic access to emojis as organized in the
 emoji-cheat-sheet.com website.
