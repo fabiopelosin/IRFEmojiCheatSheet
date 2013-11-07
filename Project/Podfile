@@ -1,0 +1,3 @@
+target "IRFEmojiCheatSheetTests" do
+  pod "IRFEmojiCheatSheet", :path => "../"
+end

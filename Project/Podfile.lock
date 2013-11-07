@@ -1,0 +1,14 @@
+PODS:
+  - IRFEmojiCheatSheet (0.1.0)
+
+DEPENDENCIES:
+  - IRFEmojiCheatSheet (from `../`)
+
+EXTERNAL SOURCES:
+  IRFEmojiCheatSheet:
+    :path: ../
+
+SPEC CHECKSUMS:
+  IRFEmojiCheatSheet: 0a46c1e9f5817bf95dc0e6dafe48e1f2827f07e3
+
+COCOAPODS: 0.27.1
