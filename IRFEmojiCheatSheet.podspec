@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "IRFEmojiCheatSheet"
-  s.version      = "0.1.0"
+  s.version      = "0.2.0"
   s.summary      = "Offers programmatic access to emojis as organized in the emoji-cheat-sheet.com website."
   s.homepage     = "https://github.com/irrationalfab/IRFEmojiCheatSheet"
   s.license      = 'MIT'

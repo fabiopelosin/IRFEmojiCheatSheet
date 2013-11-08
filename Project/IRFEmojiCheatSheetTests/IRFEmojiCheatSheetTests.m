@@ -23,9 +23,30 @@
 
 - (void)testEmojisByGroups
 {
-    NSDictionary *emojisByGroups = [IRFEmojiCheatSheet emojisByGroups];
-    XCTAssertEqualObjects(emojisByGroups[@"People"][0], @"bowtie", @"Emojy by groups error");
+    NSDictionary *emojisByGroup = [IRFEmojiCheatSheet emojisByGroup];
+    XCTAssertEqualObjects(emojisByGroup[@"People"][0], @"smile", @"Emojy by groups error");
 }
+
+- (void)testMissingSupportedEmojis
+{
+    NSDictionary *emojisByGroup = [IRFEmojiCheatSheet emojisByGroup];
+    [emojisByGroup enumerateKeysAndObjectsUsingBlock:^(id key, NSArray *aliases, BOOL *stop) {
+        [aliases enumerateObjectsUsingBlock:^(NSString *alias, NSUInteger idx, BOOL *stop) {
+            NSString *emoji = [IRFEmojiCheatSheet emojisByAlias][alias];
+            XCTAssertNotNil(emoji, @"Unsupported alias %@ detected", alias);
+        }];
+    }];
+}
+
+//- (void)testAllAliasesHaveAGroup
+//{
+//    NSArray *aliases = [[IRFEmojiCheatSheet emojisByAlias] allKeys];
+//    NSArray *aliasesFromGrousp = [[[IRFEmojiCheatSheet emojisByGroup] allValues] valueForKeyPath: @"@unionOfArrays.self"];
+//    [aliases enumerateObjectsUsingBlock:^(NSString *alias, NSUInteger idx, BOOL *stop) {
+//        BOOL found = [aliasesFromGrousp indexOfObject:alias] != NSNotFound;
+//        XCTAssertTrue(found, @"Uncategorized alias: %@", alias);
+//    }];
+//}
 
 - (void)testEmojisByAlias
 {

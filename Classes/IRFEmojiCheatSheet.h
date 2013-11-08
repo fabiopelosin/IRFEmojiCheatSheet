@@ -24,7 +24,7 @@
  Returns a dictionary where the keys are the names of the groups and the values
  are the lists of the emoji aliases associated with that group.
  */
-+ (NSDictionary*)emojisByGroups;
++ (NSDictionary*)emojisByGroup;
 
 /**
  Returns a dictionary which maps the aliases to the emoji characters.
