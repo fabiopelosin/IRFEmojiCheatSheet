@@ -294,7 +294,6 @@
 					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IRFEmojiCheatSheet/IRFEmojiCheatSheet-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -315,7 +314,6 @@
 					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IRFEmojiCheatSheet/IRFEmojiCheatSheet-Prefix.pch";
 				INFOPLIST_FILE = "IRFEmojiCheatSheetTests/IRFEmojiCheatSheetTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;

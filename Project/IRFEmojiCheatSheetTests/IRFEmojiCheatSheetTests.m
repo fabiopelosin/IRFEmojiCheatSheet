@@ -33,5 +33,11 @@
     XCTAssertEqualObjects(emojisByAlias[@"+1"], @"👍", @"Emojy alias error");
 }
 
+- (void)testAliasReplacement
+{
+    NSString *result = [IRFEmojiCheatSheet stringByReplacingEmojiAliasesInString:@":smile: :+1:"];
+    XCTAssertEqualObjects(result, @"😄 👍", @"Emojy alias replacement error");
+}
+
 
 @end

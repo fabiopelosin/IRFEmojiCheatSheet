@@ -1772,5 +1772,21 @@
     return _emojisByAlias;
 }
 
++ (NSString*)stringByReplacingEmojiAliasesInString:(NSString*)string {
+    NSRegularExpression *regex = [[NSRegularExpression alloc] initWithPattern:@"(:[a-z0-9-+_]+:)" options:NSRegularExpressionCaseInsensitive error:NULL];
+    NSMutableString *result = [string mutableCopy];
+    NSRange range = NSMakeRange(0, [string length]);
+    [regex enumerateMatchesInString:string options:NSMatchingReportCompletion range:range usingBlock:^(NSTextCheckingResult *checkingResult, NSMatchingFlags flags, BOOL *stop) {
+        NSString *match = [string substringWithRange:checkingResult.range];
+        NSString *alias = [match stringByReplacingOccurrencesOfString:@":" withString:@""];
+        NSString *emojiCharacter = [self emojisByAlias][alias];
+        if (emojiCharacter) {
+            NSRange resultRange = NSMakeRange(0, [result length]);
+            [result replaceOccurrencesOfString:match withString:emojiCharacter options:0 range:resultRange];
+        }
+     }];
+    return result;
+}
+
 
 @end

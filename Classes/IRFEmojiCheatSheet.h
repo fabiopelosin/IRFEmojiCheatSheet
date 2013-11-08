@@ -31,4 +31,9 @@
  */
 + (NSDictionary *)emojisByAlias;
 
+/**
+ Replaces the aliases surrounded by colons with the emoji characters.
+ */
++ (NSString*)stringByReplacingEmojiAliasesInString:(NSString*)string;
+
 @end
